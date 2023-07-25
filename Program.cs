@@ -112,6 +112,19 @@ namespace ConsAppAssisgnment15
                 j++; k++;
             }
         }
+        public static bool checkSorted(int[] arr)
+        {
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                if (arr[i] > arr[i + 1])
+                {
+                    return false;
+
+                }
+
+            }
+            return true;
+        }
         static void Main(string[] args)
         {
             int[] arr2 = { 38, 37, 27, 43, 3, 9, 82, 10 };
@@ -124,6 +137,9 @@ namespace ConsAppAssisgnment15
             Console.WriteLine("After MergeSort");
             Print(arr2);
             Console.WriteLine($"ArraySize {arr2.Length} Time Taken {stopwatch.Elapsed.Milliseconds} miliseconds");
+            bool check = checkSorted(arr2);
+            if (check) { Console.WriteLine("Array is Sorted"); }
+            else { Console.WriteLine("unsorted"); }
             Console.WriteLine("==========================================================================================");
 
 
@@ -138,6 +154,9 @@ namespace ConsAppAssisgnment15
             Console.WriteLine("After QuickSort");
             Print(array);
             Console.WriteLine($"ArraySize {array.Length} Time Taken  {stopwatch.Elapsed.Milliseconds} miliseconds");
+            bool check1 = checkSorted(array);
+            if (check1) { Console.WriteLine("Array is Sorted"); }
+            else { Console.WriteLine("unsorted"); }
             Console.ReadKey();
         }
     }
