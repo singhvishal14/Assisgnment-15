@@ -136,7 +136,7 @@ namespace ConsAppAssisgnment15
             stopwatch.Stop();
             Console.WriteLine("After MergeSort");
             Print(arr2);
-            Console.WriteLine($"ArraySize {arr2.Length} Time Taken {stopwatch.Elapsed.Milliseconds} miliseconds");
+            Console.WriteLine($"ArraySize {arr2.Length} Time Taken {stopwatch.Elapsed.TotalMilliseconds} miliseconds");
             bool check = checkSorted(arr2);
             if (check) { Console.WriteLine("Array is Sorted"); }
             else { Console.WriteLine("unsorted"); }
@@ -153,7 +153,7 @@ namespace ConsAppAssisgnment15
             stopwatch.Stop();
             Console.WriteLine("After QuickSort");
             Print(array);
-            Console.WriteLine($"ArraySize {array.Length} Time Taken  {stopwatch.Elapsed.Milliseconds} miliseconds");
+            Console.WriteLine($"ArraySize {array.Length} Time Taken  {stopwatch.Elapsed.TotalMilliseconds} miliseconds");
             bool check1 = checkSorted(array);
             if (check1) { Console.WriteLine("Array is Sorted"); }
             else { Console.WriteLine("unsorted"); }
